@@ -1,21 +1,12 @@
-'use strict';
+/////////////////////////////////////////////////////////////////////
+// App
+/////////////////////////////////////////////////////////////////////
+define(["angular", "filters", "services/index", "directives", "controllers/index", "angularRoute"], function (angular, filters, services, directives, controllers) {
 
-define([
-	'angular',
-	'filters',
-	'services',
-	'directives',
-	'controllers',
-	'angularRoute',
-	], function (angular, filters, services, directives, controllers) {
+	/////////////////////////////////////////////////////////////////////
+    // Some top level app opeations
 
-		// Declare app level module which depends on filters, and services
-		
-		return angular.module('myApp', [
-			'ngRoute',
-			'myApp.filters',
-			'myApp.services',
-			'myApp.directives',
-			'myApp.controllers'
-		]);
+    /////////////////////////////////////////////////////////////////////
+    return angular.module("app", ["ngRoute","app.filters","app.services","app.directives","app.controllers"]);
+    
 });

@@ -1,13 +1,10 @@
-'use strict';
+define(["angular", "services/index"], function(angular, services) {
 
-define(['angular', 'services'], function(angular, services) {
-
-	/* Directives */
-	
-	angular.module('myApp.directives', ['myApp.services'])
-		.directive('appVersion', ['version', function(version) {
+	angular.module("app.directives", ["app.services"])
+		.directive("appVersion", ["version", function(version) {
 			return function(scope, elm, attrs) {
 				elm.text(version);
 		};
 	}]);
+        
 });

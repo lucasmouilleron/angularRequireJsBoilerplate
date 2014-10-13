@@ -1,11 +1,7 @@
-'use strict';
+define(["angular", "services/index"], function (angular, services) {
 
-define(['angular', 'services'], function (angular, services) {
-
-	/* Filters */
-	
-	angular.module('myApp.filters', ['myApp.services'])
-		.filter('interpolate', ['version', function(version) {
+	angular.module("app.filters", ["app.services"])
+		.filter("interpolate", ["version", function(version) {
 			return function(text) {
 				return String(text).replace(/\%VERSION\%/mg, version);
 			};

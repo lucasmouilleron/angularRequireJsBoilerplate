@@ -2,6 +2,7 @@
 // REQUIREJS CONFIG
 /////////////////////////////////////////////////////////////////////
 require.config({
+    baseUrl: "_dev/js",
     paths: {
         "jquery": "libs/vendor/jquery/dist/jquery",
         "bootstrap": "libs/vendor/bootstrap/dist/js/bootstrap.min",
@@ -11,8 +12,8 @@ require.config({
         "angular": "libs/vendor/angular/angular",
         "angularRoute": "libs/vendor/angular-route/angular-route",
         "angularMocks": "libs/vendor/angular-mocks/angular-mocks",
-        "text": "libs/vendor/requirejs-text/text"
-
+        "text": "libs/vendor/requirejs-text/text",
+        "domReady": "libs/vendor/requirejs-domready/domReady"
     },
     shim: {
         "bootstrap": ["jquery"],
@@ -30,11 +31,13 @@ require.config({
 /////////////////////////////////////////////////////////////////////
 // ENTRY POINT
 /////////////////////////////////////////////////////////////////////
-//require(["jquery", "angular", "app", "routes", "tools", "bootstrap"], function($, angular, app, routes, tools) {
-    require(["jquery", "angular", "tools", "bootstrap"], function($, angular, tools) {
-    $(function() {
-        tools.displayMainLoader();
-        setTimeout(function(){tools.hideMainLoader()}, 2000);
-        c("ok");
+require(["angular", "app", "routes", "bootstrap"], function (angular) {
+
+    require(["domReady!"], function (document) {
+
+        angular.bootstrap(document, ["app"]);
+        //http://viralpatel.net/blogs/angularjs-routing-and-views-tutorial-with-example/
+
     });
+    
 });
