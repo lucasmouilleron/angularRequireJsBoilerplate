@@ -35,8 +35,11 @@ require.config({
 /////////////////////////////////////////////////////////////////////
 require(["angular", "app", "routes", "bootstrap"], function (angular) {
 
-    require(["domReady!"], function (document) {
-        angular.bootstrap(document, ["app"]);
+    require(["domReady"], function (domReady) {
+        domReady(function() {
+            angular.bootstrap(document, ["app"]);    
+        });
+        
     });
     
 });
