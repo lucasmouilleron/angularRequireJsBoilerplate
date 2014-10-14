@@ -2,6 +2,7 @@
 // RequireJs config
 /////////////////////////////////////////////////////////////////////
 require.config({
+    waitSeconds: 200,
     baseUrl: "_dev/js",
     paths: {
         "jquery": "libs/vendor/jquery/dist/jquery",
