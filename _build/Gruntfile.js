@@ -14,25 +14,6 @@ module.exports = function(grunt) {
         }
       }
     },
-    bower: {
-      main: {
-        dest: "<%=cfg.jsDevDir%>/libs/vendor",
-        options: {
-          expand: true,
-          packageSpecific: {
-            requirejs: {
-              dest: "<%=cfg.jsDir%>"
-            },
-            modernizr: {
-              dest: "<%=cfg.jsDir%>"
-            },
-            respond: {
-              dest: "<%=cfg.jsDir%>"
-            }
-          }
-        }
-      }
-    },
     shell: {
       options: {
         stdout: true,
@@ -119,12 +100,11 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks("grunt-contrib-clean");
   grunt.loadNpmTasks("grunt-autoprefixer");
   grunt.loadNpmTasks("grunt-shell");
-  grunt.loadNpmTasks("grunt-bower");
 
   /////////////////////////////////////////////////////////////////////////
   grunt.registerTask("default", "These help instructions",["availabletasks"]);
   grunt.registerTask("cleanup", "Clean project",["clean:default"]);
-  grunt.registerTask("install", "Install the project",["shell:install","bower:main"]);
+  grunt.registerTask("install", "Install the project",["shell:install"]);
   grunt.registerTask("watch:scripts", "Watch and compile js files",["watch:js"]);
   grunt.registerTask("watch:all", "Watch all (scripts + styles)",["watch:everything"]);
   grunt.registerTask("watch:styles", "Compile sass files",["watch:sass"]);

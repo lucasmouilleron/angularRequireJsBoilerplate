@@ -13,5 +13,5 @@
   "imgDir": "../assets/img",
   "fontsDir": "../assets/fonts",
   "jsDir": "../assets/js",
-  "cleanFiles":["node_modules", ".sass-cache", "../_dev/js/vendor"]
+  "cleanFiles":["node_modules", ".sass-cache", "../_dev/js/libs/vendor"]
 }
