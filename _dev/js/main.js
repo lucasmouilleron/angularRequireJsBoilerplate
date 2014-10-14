@@ -1,5 +1,5 @@
 /////////////////////////////////////////////////////////////////////
-// REQUIREJS CONFIG
+// RequireJs config
 /////////////////////////////////////////////////////////////////////
 require.config({
     baseUrl: "_dev/js",
@@ -11,6 +11,7 @@ require.config({
         "tools": "libs/tools",
         "angular": "libs/vendor/angular/angular",
         "angularRoute": "libs/vendor/angular-route/angular-route",
+        "angularAnimate": "libs/vendor/angular-animate/angular-animate",
         "angularMocks": "libs/vendor/angular-mocks/angular-mocks",
         "text": "libs/vendor/requirejs-text/text",
         "domReady": "libs/vendor/requirejs-domready/domReady"
@@ -21,23 +22,17 @@ require.config({
         "tools": ["jquery", "console"],
         "angular" : {"exports" : "angular"},
         "angularRoute": ["angular"],
-        "angularMocks": {
-            deps:["angular"],
-            "exports":"angular.mock"
-        }
+        "angularAnimate": ["angular"]
     }
 });
 
 /////////////////////////////////////////////////////////////////////
-// ENTRY POINT
+// RequireJs entry point
 /////////////////////////////////////////////////////////////////////
 require(["angular", "app", "routes", "bootstrap"], function (angular) {
 
     require(["domReady!"], function (document) {
-
         angular.bootstrap(document, ["app"]);
-        //http://viralpatel.net/blogs/angularjs-routing-and-views-tutorial-with-example/
-
     });
     
 });

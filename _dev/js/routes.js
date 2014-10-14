@@ -12,7 +12,7 @@ define(["app"], function(app) {
 		});
 
 		/////////////////////////////////////////////////////////////////////
-		$routeProvider.when("/view2", {
+		$routeProvider.when("/view2/:anId", {
 			templateUrl: "_dev/js/views/view2.html",
 			controller: "controller2"
 		});

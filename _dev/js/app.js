@@ -1,12 +1,12 @@
 /////////////////////////////////////////////////////////////////////
 // App
 /////////////////////////////////////////////////////////////////////
-define(["angular", "filters/index", "services/index", "directives/index", "controllers/index", "angularRoute"], function (angular, filters, services, directives, controllers) {
+define(["angular", "filters/index", "services/index", "directives/index", "controllers/index", "angularRoute", "angularAnimate"], function (angular, filters, services, directives, controllers) {
 
 	/////////////////////////////////////////////////////////////////////
     // Some top level app opeations
 
     /////////////////////////////////////////////////////////////////////
-    return angular.module("app", ["ngRoute","app.filters","app.services","app.directives","app.controllers"]);
+    return angular.module("app", ["ngRoute","ngAnimate", "app.filters","app.services","app.directives","app.controllers"]);
     
 });
