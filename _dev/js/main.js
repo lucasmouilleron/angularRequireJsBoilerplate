@@ -33,13 +33,10 @@ require.config({
 /////////////////////////////////////////////////////////////////////
 // RequireJs entry point
 /////////////////////////////////////////////////////////////////////
-require(["angular", "app", "routes", "bootstrap"], function (angular) {
+require(["angular", "domReady", "app", "routes", "bootstrap"], function (angular, domReady) {
 
-    require(["domReady"], function (domReady) {
-        domReady(function() {
-            angular.bootstrap(document, ["app"]);    
-        });
-        
+    domReady(function() {
+        angular.bootstrap(document, ["app"]);    
     });
     
 });
