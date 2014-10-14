@@ -12,9 +12,10 @@ require.config({
         "angular": "libs/vendor/angular/angular",
         "angularRoute": "libs/vendor/angular-route/angular-route",
         "angularAnimate": "libs/vendor/angular-animate/angular-animate",
-        "angularMocks": "libs/vendor/angular-mocks/angular-mocks",
+        "angularLoadBar": "libs/vendor/angular-loading-bar/build/loading-bar",
+        "angularGrowl": "libs/vendor/angular-growl-v2/build/angular-growl",
         "text": "libs/vendor/requirejs-text/text",
-        "domReady": "libs/vendor/requirejs-domready/domReady"
+        "domReady": "libs/vendor/requirejs-domready/domReady",
     },
     shim: {
         "bootstrap": ["jquery"],
@@ -22,7 +23,9 @@ require.config({
         "tools": ["jquery", "console"],
         "angular" : {"exports" : "angular"},
         "angularRoute": ["angular"],
-        "angularAnimate": ["angular"]
+        "angularAnimate": ["angular"],
+        "angularLoadBar": ["angular"],
+        "angularGrowl": ["angular"]
     }
 });
 

@@ -6,6 +6,16 @@ define("tools", ["jquery", "throbber"], function($, Throbber) {
     return {
 
         ////////////////////////////////////////////////////////////////////////////////
+        isEmpty: function(obj) {
+            for(var prop in obj) {
+                if(obj.hasOwnProperty(prop))
+                    return false;
+            }
+
+            return true;
+        },
+
+        ////////////////////////////////////////////////////////////////////////////////
         displayLoaderForElement: function(elementID, fixed) {
             if (elementID.substr(0, 1) !== "#") {
                 elementID = "#" + elementID;

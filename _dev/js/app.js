@@ -1,12 +1,22 @@
 /////////////////////////////////////////////////////////////////////
 // App
 /////////////////////////////////////////////////////////////////////
-define(["angular", "filters/index", "services/index", "directives/index", "controllers/index", "angularRoute", "angularAnimate"], function (angular, filters, services, directives, controllers) {
-
-	/////////////////////////////////////////////////////////////////////
-    // Some top level app opeations
+define(["angular", "filters/index", "services/index", "directives/index", "controllers/index", "angularRoute", "angularAnimate", "angularLoadBar", "angularGrowl"], function (angular, filters, services, directives, controllers) {
 
     /////////////////////////////////////////////////////////////////////
-    return angular.module("app", ["ngRoute","ngAnimate", "app.filters","app.services","app.directives","app.controllers"]);
+    var app = angular.module("app", ["app.filters","app.services","app.directives","app.controllers", "ngRoute", "ngAnimate", "angular-loading-bar", "angular-growl"]);
+
+    /////////////////////////////////////////////////////////////////////
+    app.config(["growlProvider", function(growlProvider) {
+        growlProvider.globalTimeToLive(5000);
+        growlProvider.globalDisableCountDown(true);
+        growlProvider.globalPosition("bottom-right");
+        growlProvider.onlyUniqueMessages(false);
+    }]);
+
+    /////////////////////////////////////////////////////////////////////
+    // Some top level app opeations
+
+    return app;
     
 });

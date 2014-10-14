@@ -3,8 +3,8 @@ angularRequireJsBoilerplate
 
 Features
 --------
-- Stack : scss, requirejs, angular, bootstrap
-- Grunt : build, watch, sync
+- Stack : requirejs, angular, scss, bootstrap
+- Build : install, build, watch
 
 Install
 -------
@@ -18,13 +18,7 @@ Build
 -----
 - modify ```_build/config.json``` if needed
 - ```cd _build```
-- ```npm install```
-- ```grunt build```
-
-Sync
-----
-- ```cd _build```
-- ```grunt sync```
+- ```npm install && grunt build```
 
 RequireJS
 ---------

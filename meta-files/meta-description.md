@@ -1,4 +1,4 @@
-Our angular / requireJs boilerplate.
+Our angularRequireJs boilerplate.
 
-- Stack : angular, requirejs, scss, bootstrap
-- Build : grunt, bower, build, watch, sync
+- Stack : requirejs, angular, scss, bootstrap
+- Build : grunt, bower, install, build, watch
