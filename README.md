@@ -13,7 +13,6 @@ Install
 - `sudo npm install grunt -g`
 - `sudo gem install sass`
 - `sudo gem install --pre sass-css-importer`
-- If installed on domain root, modify ```<base>``` in ```index.html``` (switch to ```/``)
 
 Build
 -----
