@@ -1,6 +1,6 @@
 /////////////////////////////////////////////////////////////////////
 // Controllers index (shortcut for future inclusions)
 /////////////////////////////////////////////////////////////////////
-define(["./module", "./controller1", "./controller2"], function () {
+define(["./module", "./controller1", "./controller2", "./navController"], function () {
 
 });

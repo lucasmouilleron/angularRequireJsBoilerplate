@@ -1,7 +1,7 @@
 /////////////////////////////////////////////////////////////////////
 // App
 /////////////////////////////////////////////////////////////////////
-define(["angular", "filters", "services/index", "directives", "controllers/index", "angularRoute"], function (angular, filters, services, directives, controllers) {
+define(["angular", "filters/index", "services/index", "directives/index", "controllers/index", "angularRoute"], function (angular, filters, services, directives, controllers) {
 
 	/////////////////////////////////////////////////////////////////////
     // Some top level app opeations
