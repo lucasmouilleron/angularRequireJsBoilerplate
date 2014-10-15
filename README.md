@@ -3,8 +3,9 @@ angularRequireJsBoilerplate
 
 Features
 --------
-- Stack : requirejs, angular, scss, bootstrap
-- Build : install, build, watch
+- A nice angular requirejs boilerplate
+- Stack : requirejs, angular, scss, bootstrap, fontawesome
+- Build : install, build, watch, grunt, bower
 
 Install
 -------

@@ -13,5 +13,10 @@
   "imgDir": "../assets/img",
   "fontsDir": "../assets/fonts",
   "jsDir": "../assets/js",
-  "cleanFiles":["node_modules", ".sass-cache", "../_dev/js/libs/vendor"]
+  "cleanFiles":["node_modules", ".sass-cache", "../_dev/js/libs/vendor"],
+  "copyFiles":{
+    "../_dev/js/libs/vendor/components-font-awesome/fonts/*":"../assets/fonts/",
+    "../_dev/js/libs/vendor/modernizr/modernizr.js":"../assets/js/",
+    "../_dev/js/libs/vendor/requirejs/require.js":"../assets/js/"
+  }
 }

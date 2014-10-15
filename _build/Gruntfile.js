@@ -78,6 +78,11 @@ module.exports = function(grunt) {
         src: "<%=cfg.cleanFiles%>"
       }
     },   
+    copyFiles: {
+      main: {
+        files: "<%=cfg.copyFiles%>"
+      }
+    },
     autoprefixer: {
       options: {
        browsers: ["last 2 version"]
@@ -105,11 +110,26 @@ module.exports = function(grunt) {
   /////////////////////////////////////////////////////////////////////////
   grunt.registerTask("default", "These help instructions",["availabletasks"]);
   grunt.registerTask("cleanup", "Clean project",["clean:default"]);
-  grunt.registerTask("install", "Install the project",["shell:install"]);
+  grunt.registerTask("install", "Install the project",["shell:install", "copyFiles:main"]);
   grunt.registerTask("watch:scripts", "Watch and compile js files",["watch:js"]);
   grunt.registerTask("watch:all", "Watch all (scripts + styles)",["watch:everything"]);
   grunt.registerTask("watch:styles", "Compile sass files",["watch:sass"]);
   grunt.registerTask("compile:scripts", "Compile js files",["requirejs:compile"]);
   grunt.registerTask("compile:styles", "Watch and compile sass files",["compass:compile","autoprefixer"]);
   grunt.registerTask("build", "Build all (scripts + styles)",["install", "compile:styles","compile:scripts"]);
+
+  /////////////////////////////////////////////////////////////////////////
+  grunt.task.registerMultiTask("copyFiles", function() {
+    var path = require("path");
+    for(file in this.data.files) {
+      var filesCopy = grunt.file.expand(file);
+      for(fileCopy in filesCopy) {
+        var from = filesCopy[fileCopy];
+        var to = path.join(this.data.files[file], path.basename(from));
+        grunt.log.ok("Copying "+from+" to "+to)
+        grunt.file.copy(from, to);
+      }
+    }
+  });
+
 };
