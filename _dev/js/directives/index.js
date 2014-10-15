@@ -10,7 +10,6 @@ define(["./module", "jquery"], function (directives) {
         };
     }]);
     
-
     /////////////////////////////////////////////////////////////////////
     directives.directive("whenScrolled", ["$window", "$timeout", function($window, $timeout) {
         return function(scope, elm, attr) {
