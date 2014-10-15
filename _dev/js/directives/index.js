@@ -11,13 +11,18 @@ define(["./module", "jquery"], function (directives) {
     }]);
 
     /////////////////////////////////////////////////////////////////////
-    directives.directive("whenScrolled", ["$window", function($window) {
+    directives.directive("whenScrolled", ["$window", "$timeout", function($window, $timeout) {
         return function(scope, elm, attr) {
-            theWindow = angular.element($window);
+            var theWindow = angular.element($window);
             var raw = elm;
+            var busy = false;
             theWindow.bind("scroll", function() {
-                if ($(this).height()+$(this).scrollTop() >= $(raw).outerHeight() + $(raw).offset().top) {
+                if (!busy && $(this).height() + $(this).scrollTop() >= $(raw).outerHeight() + $(raw).offset().top) {
+                    busy = true;
                     scope.$apply(attr.whenScrolled);
+                    $timeout(function() {
+                        busy = false;
+                    }, 2000);
                 }
             });
         };
