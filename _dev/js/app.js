@@ -15,13 +15,13 @@ define(["angular", "filters/index", "services/index", "directives/index", "contr
     }]);
 
     /////////////////////////////////////////////////////////////////////
-    app.run(function ($rootScope, $timeout, $window) {
+    app.run(["$rootScope", "$timeout", "$window", function ($rootScope, $timeout, $window) {
         $rootScope.$on('$routeChangeSuccess', function () {
             $timeout(function () {
                 $window.scrollTo(0,0);
             }, 500);
         });
-    });
+    }]);
 
     /////////////////////////////////////////////////////////////////////
     // Some other top level app opeations
