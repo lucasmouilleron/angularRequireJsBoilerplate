@@ -2,7 +2,6 @@
 // RequireJs config
 /////////////////////////////////////////////////////////////////////
 require.config({
-    waitSeconds: 200,
     baseUrl: "_dev/js",
     paths: {
         "jquery": "libs/vendor/jquery/dist/jquery",
@@ -27,7 +26,8 @@ require.config({
         "angularAnimate": ["angular"],
         "angularLoadBar": ["angular"],
         "angularGrowl": ["angular"]
-    }
+    },
+    priority: ["angular"]
 });
 
 /////////////////////////////////////////////////////////////////////
@@ -36,7 +36,7 @@ require.config({
 require(["angular", "domReady", "app", "routes", "bootstrap"], function (angular, domReady) {
 
     domReady(function() {
-        angular.bootstrap(document, ["app"]);    
+        angular.bootstrap(document, ["app"]);
     });
-    
+
 });

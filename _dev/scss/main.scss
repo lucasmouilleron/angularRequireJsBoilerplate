@@ -25,18 +25,22 @@ html,body {
 
 .main-view-container {
     position:relative;
-    margin-top:70px;
+    top:70px;
 }
 
 .main-view {
     position:relative;
+    padding-bottom:30px;
 }
 
 .main-view.ng-enter, .main-view.ng-leave {
-    transition:all linear 0.5s;
-    position:absolute;
+    transition:all linear 1s;
     top:0;
     display:block!important;
+}
+
+.main-view.ng-leave {
+    transition:all linear 0.5s;
 }
 
 .main-view.ng-enter, .main-view.ng-leave.ng-leave-active {
@@ -49,4 +53,3 @@ html,body {
 .growl-container.growl-fixed.top-right {
     top:70px;
 }
-

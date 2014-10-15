@@ -30,6 +30,26 @@ define(["./module", "tools"], function (services, tools) {
     }]);
 
     /////////////////////////////////////////////////////////////////////
+    services.factory("Reddits", ["$http", "$q", "growl", function($http, $q, growl) {
+        return {
+            from: function(after) {
+                var deferred = $q.defer();
+                growl.info("Loading reddits from REST");
+                $http.jsonp("http://api.reddit.com/hot?after=" + after + "&jsonp=JSON_CALLBACK").success(function(data) {
+                    var items = data.data.children;
+                    var finalItems = [];
+                    var next = "t3_" + items[items.length - 1].data.id;
+                    for (var i = 0; i < items.length; i++) {
+                        finalItems.push(items[i].data);
+                    }
+                    deferred.resolve({"next":next, "items": finalItems});
+                });
+                return deferred.promise;
+            }
+        }
+    }]);
+
+    /////////////////////////////////////////////////////////////////////
     // another service
     // if too many, use one file per service
 
