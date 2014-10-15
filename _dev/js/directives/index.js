@@ -16,8 +16,9 @@ define(["./module", "jquery"], function (directives) {
             var theWindow = angular.element($window);
             var raw = elm;
             var busy = false;
+            var defaultOffset = -40;
             theWindow.bind("scroll", function() {
-                if (!busy && $(this).height() + $(this).scrollTop() >= $(raw).outerHeight() + $(raw).offset().top) {
+                if (!busy && $(this).height() + $(this).scrollTop() >= $(raw).outerHeight() + $(raw).offset().top + defaultOffset) {
                     busy = true;
                     scope.$apply(attr.whenScrolled);
                     $timeout(function() {
