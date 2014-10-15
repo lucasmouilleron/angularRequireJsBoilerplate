@@ -77,7 +77,7 @@ module.exports = function(grunt) {
       default: {
         src: "<%=cfg.cleanFiles%>"
       }
-    },   
+    },
     copyFiles: {
       main: {
         files: "<%=cfg.copyFiles%>"

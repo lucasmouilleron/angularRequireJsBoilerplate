@@ -23,7 +23,7 @@ define(["./module", "jquery"], function (directives) {
                     scope.$apply(attr.whenScrolled);
                     $timeout(function() {
                         busy = false;
-                    }, 2000);
+                    }, 500);
                 }
             });
         };
