@@ -24,6 +24,7 @@
 html,body {
     font-family:$normalFont;
     height:100%;
+    word-break: break-all;
 }
 
 .main-view-container {
