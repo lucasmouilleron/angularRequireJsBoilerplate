@@ -34,8 +34,11 @@
       </div>
       <div class="navbar-collapse collapse">
         <ul class="nav navbar-nav">
-          <li ng-class="{active: routeIs('/view1')}"><a href="#/view1">view 1</a></li>
-          <li ng-class="{active: routeIs('/view2')}"><a href="#/view2/testId">view 2</a></li>
+          <li ng-class="{active: routeIs('/reddits')}"><a href="#/reddits">Infinite Reddits</a></li>
+          <li ng-class="{active: routeIs('/github')}"><a href="#/github/lucasmouilleron">Github</a></li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+        <li><button class="btn navbar-btn" ng-click="popin()"><i class="fa fa-cog"></i> Settings</button></li>
         </ul>
       </div>
     </div>

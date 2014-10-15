@@ -3,7 +3,7 @@
 /////////////////////////////////////////////////////////////////////
 define(["./module"], function (controllers) {
 
-    controllers.controller("controller1", ["$scope", "Reddits", function ($scope, Reddits) {
+    controllers.controller("redditsController", ["$scope", "Reddits", function ($scope, Reddits) {
         var next = 0;
         $scope.theReddits = [];
         $scope.loadMore = function() {

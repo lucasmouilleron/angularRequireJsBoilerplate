@@ -6,19 +6,19 @@ define(["app"], function(app) {
 	return app.config(["$routeProvider", function($routeProvider) {
 
 		/////////////////////////////////////////////////////////////////////
-		$routeProvider.when("/view1", {
-			templateUrl: "_dev/js/views/view1.html",
-			controller: "controller1"
+		$routeProvider.when("/reddits", {
+			templateUrl: "_dev/js/views/reddits.html",
+			controller: "redditsController"
 		});
 
 		/////////////////////////////////////////////////////////////////////
-		$routeProvider.when("/view2/:anId", {
-			templateUrl: "_dev/js/views/view2.html",
-			controller: "controller2"
+		$routeProvider.when("/github/:anId", {
+			templateUrl: "_dev/js/views/github.html",
+			controller: "githubController"
 		});
 
 		/////////////////////////////////////////////////////////////////////
-		$routeProvider.otherwise({redirectTo: "/view1"});
+		$routeProvider.otherwise({redirectTo: "/reddits"});
 		
 	}]);
 

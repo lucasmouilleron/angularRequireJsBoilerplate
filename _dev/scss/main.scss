@@ -13,6 +13,9 @@
 @import "CSS:../js/libs/vendor/bootstrap/dist/css/bootstrap.min";
 @import "CSS:../js/libs/vendor/angular-loading-bar/build/loading-bar";
 @import "CSS:../js/libs/vendor/angular-growl-v2/build/angular-growl";
+@import "CSS:../js/libs/vendor/ngDialog/css/ngDialog";
+@import "CSS:../js/libs/vendor/ngDialog/css/ngDialog-theme-default";
+@import "CSS:../js/libs/vendor/components-font-awesome/css/font-awesome";
 
 /*///////////////////////////////////////////////////////////////////////////*/
 /* CUSTOM STYLES */
@@ -52,4 +55,8 @@ html,body {
 
 .growl-container.growl-fixed.top-right {
     top:70px;
+}
+
+.ngdialog.ngdialog-theme-default .ngdialog-content {
+    width:550px;
 }

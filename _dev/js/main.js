@@ -14,6 +14,7 @@ require.config({
         "angularAnimate": "libs/vendor/angular-animate/angular-animate",
         "angularLoadBar": "libs/vendor/angular-loading-bar/build/loading-bar",
         "angularGrowl": "libs/vendor/angular-growl-v2/build/angular-growl",
+        "angularDialog": "libs/vendor/ngDialog/js/ngDialog",
         "text": "libs/vendor/requirejs-text/text",
         "domReady": "libs/vendor/requirejs-domready/domReady",
     },
@@ -25,7 +26,8 @@ require.config({
         "angularRoute": ["angular"],
         "angularAnimate": ["angular"],
         "angularLoadBar": ["angular"],
-        "angularGrowl": ["angular"]
+        "angularGrowl": ["angular"],
+        "angularDialog": ["angular"]
     },
     priority: ["angular"]
 });
