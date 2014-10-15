@@ -9,6 +9,7 @@ define(["./module", "jquery"], function (directives) {
             elm.text(version);
         };
     }]);
+    
 
     /////////////////////////////////////////////////////////////////////
     directives.directive("whenScrolled", ["$window", "$timeout", function($window, $timeout) {
