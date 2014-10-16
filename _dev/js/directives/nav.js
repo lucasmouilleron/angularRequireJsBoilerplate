@@ -8,7 +8,7 @@ define(["./module", "jquery"], function (directives) {
 
         function link($scope, $element, $attrs) {
 
-            $(".nav a").on("click", function(){
+            $(".nav a").on("click touchstart", function(){
                 $(".btn-navbar").click();
                 $(".navbar-toggle").click()
             });
