@@ -16,6 +16,7 @@
 @import "CSS:../js/libs/vendor/ngDialog/css/ngDialog";
 @import "CSS:../js/libs/vendor/ngDialog/css/ngDialog-theme-default";
 @import "CSS:../js/libs/vendor/components-font-awesome/css/font-awesome";
+@import "CSS:../js/libs/vendor/sweetalert/lib/sweet-alert";
 
 /*///////////////////////////////////////////////////////////////////////////*/
 /* CUSTOM STYLES */
@@ -60,4 +61,13 @@ html,body {
 
 .ngdialog.ngdialog-theme-default .ngdialog-content {
     width:550px;
+    background-color:#fff;
+
+    h1 {
+        margin-top:0;
+    }
+}
+
+.navbar-btn {
+    margin-right:4px;
 }

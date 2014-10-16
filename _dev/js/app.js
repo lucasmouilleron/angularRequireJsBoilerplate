@@ -1,10 +1,10 @@
 /////////////////////////////////////////////////////////////////////
 // App
 /////////////////////////////////////////////////////////////////////
-define(["angular", "filters/index", "services/index", "directives/index", "controllers/index", "angularRoute", "angularAnimate", "angularLoadBar", "angularGrowl", "angularDialog"], function (angular, filters, services, directives, controllers) {
+define(["angular", "filters/index", "services/index", "directives/index", "controllers/index", "angularRoute", "angularAnimate", "angularLoadBar", "angularGrowl", "angularDialog", "angularSweetAlert"], function (angular, filters, services, directives, controllers) {
 
     /////////////////////////////////////////////////////////////////////
-    var app = angular.module("app", ["app.filters","app.services","app.directives","app.controllers", "ngRoute", "ngAnimate", "angular-loading-bar", "angular-growl", "ngDialog"]);
+    var app = angular.module("app", ["app.filters","app.services","app.directives","app.controllers", "ngRoute", "ngAnimate", "angular-loading-bar", "angular-growl", "ngDialog","oitozero.ngSweetAlert"]);
 
     /////////////////////////////////////////////////////////////////////
     app.config(["growlProvider", function(growlProvider) {
