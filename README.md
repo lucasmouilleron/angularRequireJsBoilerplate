@@ -21,6 +21,12 @@ Build
 - ```cd _build```
 - ```npm install && grunt build```
 
+Notes
+-----
+- Compatible with phantomJS snapshoting 
+    - Controllers update the `data-status` of the `body` tag when they finished
+    - cf [https://github.com/lucasmouilleron/phantomJSBoilerplate](https://github.com/lucasmouilleron/phantomJSBoilerplate)
+
 RequireJS
 ---------
 - Debug mode : 

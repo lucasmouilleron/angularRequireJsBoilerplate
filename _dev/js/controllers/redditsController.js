@@ -1,20 +1,26 @@
 ////////////////////////////////////////////////////////////////////
-// Controller 1
+// Reddits controller
 /////////////////////////////////////////////////////////////////////
 define(["./module"], function (controllers) {
 
-    controllers.controller("redditsController", ["$scope", "Reddits", function ($scope, Reddits) {
+    controllers.controller("redditsController", ["$scope", "$q","Reddits", function ($scope, $q, Reddits) {
         var next = 0;
+        var promises = [];
         $scope.theReddits = [];
         $scope.loadMore = function() {
-            var promise = Reddits.from(next).then(function(redditsResponse) {
+            return Reddits.from(next).then(function(redditsResponse) {
                 next = redditsResponse.next;
                 for (i in redditsResponse.items) {
                     $scope.theReddits.push(redditsResponse.items[i]);
                 }
             });
         };
-        $scope.loadMore();
+        var promise = $scope.loadMore();
+        promises.push(promise);
+        
+        $q.all(promises).then(function() {
+            $scope.$parent.status = "ready";
+        });
     }]);
 
 });
