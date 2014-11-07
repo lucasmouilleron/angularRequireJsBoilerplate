@@ -13,6 +13,11 @@ define(["angular", "filters/index", "services/index", "directives/index", "contr
         growlProvider.globalPosition("bottom-right");
         growlProvider.onlyUniqueMessages(false);
     }]);
+    
+    /////////////////////////////////////////////////////////////////////
+    app.config(["$locationProvider", function($location) {
+        $location.hashPrefix("!");
+    }]);
 
     /////////////////////////////////////////////////////////////////////
     app.run(["$rootScope", "$timeout", "$window", function ($rootScope, $timeout, $window) {
