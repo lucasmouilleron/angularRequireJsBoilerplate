@@ -1,10 +1,10 @@
 /////////////////////////////////////////////////////////////////////
-// Repository service
+// Github service
 /////////////////////////////////////////////////////////////////////
 define(["./module", "tools"], function (services, tools) {
 
     /////////////////////////////////////////////////////////////////////
-    services.factory("Repositories", ["$http", "$q", "growl", function($http, $q, growl) {
+    services.factory("Github", ["$http", "$q", "growl", function($http, $q, growl) {
         var repos = {};
         return {
             all: function(username) {

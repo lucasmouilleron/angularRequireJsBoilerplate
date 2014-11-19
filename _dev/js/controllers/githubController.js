@@ -3,10 +3,10 @@
 /////////////////////////////////////////////////////////////////////
 define(["./module"], function (controllers) {
 
-    controllers.controller("githubController", ["$scope","$q","$routeParams", "Repositories", function ($scope, $q, $routeParams, Repositories) {
+    controllers.controller("githubController", ["$scope","$q","$routeParams", "Github", function ($scope, $q, $routeParams, Github) {
         var promises = [];
         $scope.githubUser = $routeParams.anId;
-        var promise = Repositories.all($scope.githubUser).then(function(repos) {
+        var promise = Github.all($scope.githubUser).then(function(repos) {
             $scope.theRepos = repos;
         });
         promises.push(promise);

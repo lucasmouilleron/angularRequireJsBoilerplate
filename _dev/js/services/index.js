@@ -1,7 +1,7 @@
 /////////////////////////////////////////////////////////////////////
 // Services index (shortcut for future inclusions)
 /////////////////////////////////////////////////////////////////////
-define(["./module", "./repositoryService", "./redditService","tools"], function (services, tools) {
+define(["./module", "./githubService", "./redditService","tools"], function (services, tools) {
 
     /////////////////////////////////////////////////////////////////////
     services.value("version", "0.1");
